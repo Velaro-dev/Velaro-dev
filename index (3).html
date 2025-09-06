@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meni bagyşla</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      width: 100vw;
+      height: 100vh;
+      background: #23193C;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+    }
+    header {
+      font-size: 40px;
+      padding: 0 0 50px;
+      font-family: Cursive;
+      font-weight: bolder;
+      color: indianred;
+      text-shadow: 0 0 10px #ED3333B0;
+      font-weight: bolder;
+      animation: ani 3s ease-in-out infinite;
+    }
+    @keyframes ani {
+      0% {
+        scale: 1;
+      }
+      50% {
+        scale: 1.1;
+      }
+      100% {
+        scale: 1;
+      }
+    }
+    .information {
+      text-align: center;
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size: 20px;
+      margin: 0 20px;
+      color: #F0F0F0A8;
+      padding: 0 0 50px;
+    }
+    .hint {
+      font-weight: bold;
+      margin: 0 0 10px;
+    }
+    q {
+      font-weight: 200;
+      margin-left: 10px;
+    }
+    .verifyCont {
+      background: #FFFFFF14;
+      border: 2px solid #FFFFFF78;
+      padding: 20px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .verifyCont #password {
+      outline: none;
+      font-size: 15px;
+      background: transparent;
+      border: none;
+      color: white;
+    }
+    #password::placeholder {
+      color: #FFFFFF80;
+    }
+    .verifyCont #button {
+      background: #CC1C6F;
+      border: none;
+      color: white;
+      padding: 10px 30px;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      gap: 10px 5px;
+      font-size: 17px;
+    }
+    .verifyCont svg {
+      width: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      Melike – Lukman
+    </header>
+    <div class="information">Söýgüliňiz ýörite siz üçin ýasadan söýgi sahypasyny açmak üçin paroly giriň</div>
+    <div class="hint">YŞARAT: <q>Söýgüli bolan wagtyňyz</q></div>
+    <div class="verifyCont">
+      <input type="number" id="password" placeholder="Paroly Giriň"/>
+      <button type="submit" href="main.html" id="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="#ffffff" d="M128 96l0 64 128 0 0-64c0-35.3-28.7-64-64-64s-64 28.7-64 64zM64 160l0-64C64 25.3 121.3-32 192-32S320 25.3 320 96l0 64c35.3 0 64 28.7 64 64l0 224c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 224c0-35.3 28.7-64 64-64z"/></svg>
+        <p>Aç</p>
+        </button>
+    </div>
+  </div>
+  
+  <script>
+    document.getElementById("button").addEventListener("click", function() {
+      const password = document.getElementById("password").value;
+      if (password === "1109") {
+      window.location.href = "main.html";
+        
+      } else {
+      alert("Nädogry parol!");
+      }
+    });
+    
+  </script>
+  
+</body>
+</html>
